@@ -17,7 +17,9 @@ class TasksController extends BaseController {
 
 	public function index()
 	{
-		return View::make('index');
+		$users = User::lists('username', 'id');
+
+		return View::make('tasks.index', compact('users'));
 	}
 
 }
