@@ -33,7 +33,4 @@
 		}
 	</style>
 </head>
-<body>
-	<h1>Laravel Task</h1>
-</body>
-</html>
+	<body>
