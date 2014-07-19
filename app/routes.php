@@ -12,3 +12,4 @@
 */
 
 Route::get( '/', ['as' => 'home',  'uses' => 'TasksController@index'] );
+Route::get('{username}/tasks', 'UserTasksController@index');
