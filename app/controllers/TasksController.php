@@ -17,9 +17,10 @@ class TasksController extends BaseController {
 
 	public function index()
 	{
+		$tasks = Task::with('user')->orderBy('created_at', 'desc')->get();
 		$users = User::lists('username', 'id');
 
-		return View::make('tasks.index', compact('users'));
+		return View::make('tasks.index', compact('tasks', 'users'));
 	}
 
 }
