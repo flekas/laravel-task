@@ -9,4 +9,8 @@ class Task extends Eloquent {
 		return $this->belongsTo('User');
 	}
 
+	public static function byUsername($username)
+	{
+		return User::byUsername($username)->tasks;
+	}
 }
