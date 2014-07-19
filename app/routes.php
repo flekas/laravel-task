@@ -11,4 +11,4 @@
 |
 */
 
-Route::resource('/', 'HomeController');
+Route::get( '/', ['as' => 'home',  'uses' => 'TasksController@index'] );
