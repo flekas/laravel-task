@@ -11,4 +11,8 @@
 			@endforeach
 		</ul>
 	</div>
+	<div class="col-md-6">
+		<h3>Add New User</h3>
+		@include('users/partials/_form')
+	</div>
 @stop
