@@ -14,6 +14,9 @@
 							{{ Form::checkbox('completed') }}
 							{{ Form::submit('Update!') }}
 						{{ Form::close() }}
+						{{ Form::model($task, ['id' => 'task-delete-form', 'method' => 'PATCH', 'route' => ['tasks.delete', $task->id]]) }}
+							{{ Form::submit('Delete!') }}
+						{{ Form::close() }}
 					</li>
 				@endforeach
 			@endforeach
