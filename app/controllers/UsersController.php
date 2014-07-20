@@ -14,8 +14,10 @@ class UsersController extends \BaseController {
 
 	public function index()
 	{
+		// Fetch all users.
 		$users = User::all();
 
+		// Load view.
 		return View::make('users.index', compact('users'));
 	}
 
@@ -23,13 +25,16 @@ class UsersController extends \BaseController {
 	{
 		try
 		{
+			// Try to create new user.
 			$this->userCreator->make(Input::all());
 		}
 		catch(ValidationException $e)
 		{
+			// Validation fails, redirect back with errors.
 			return Redirect::back()->withInput()->withErrors($e->getErrors());
 		}
 
+		// We create new user. Redirect to users.
 		return Redirect::to('users');
 	}
 
