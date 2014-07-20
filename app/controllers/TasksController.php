@@ -43,7 +43,7 @@ class TasksController extends BaseController {
 		$task->completed = Input::get('completed') ?: 0;
 		$task->save();
 
-		return Redirect::home();
+		return Redirect::back();
 	}
 
 	public function delete($id)
@@ -51,7 +51,7 @@ class TasksController extends BaseController {
 		$task = Task::findOrFail($id);
 		$task->delete();
 
-		return Redirect::home();
+		return Redirect::back();
 	}
 
 }
