@@ -13,4 +13,5 @@
 
 Route::get( '/', ['as' => 'home',  'uses' => 'TasksController@index'] );
 Route::post('/tasks', 'TasksController@store');
+Route::patch('tasks/{id}', ['as' => 'tasks.update', 'uses' => 'TasksController@update']);
 Route::get('{username}/tasks', 'UserTasksController@index');
