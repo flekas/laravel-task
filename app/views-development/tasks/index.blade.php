@@ -21,6 +21,9 @@
 				@endforeach
 			@endforeach
 		</ul>
+		@if(! isset($users))
+			{{ HTML::linkAction('home', 'Go Back!') }}
+		@endif
 	</div>
 	@if(isset($users))
 		<div class="col-md-6">
