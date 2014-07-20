@@ -23,4 +23,7 @@ class TasksController extends BaseController {
 		return View::make('tasks.index', compact('tasks', 'users'));
 	}
 
+	public function store()
+	{
+	}
 }

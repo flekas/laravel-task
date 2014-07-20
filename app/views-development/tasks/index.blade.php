@@ -12,4 +12,10 @@
 			@endforeach
 		</ul>
 	</div>
+	@if(isset($users))
+		<div class="col-md-6">
+			<h3>Add New Task</h3>
+			@include('tasks/partials/_form')
+		</div>
+	@endif
 @stop
