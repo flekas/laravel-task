@@ -39,9 +39,17 @@ class TasksController extends BaseController {
 
 	public function update($id)
 	{
-		$task = Task::find($id);
+		$task = Task::findOrFail($id);
 		$task->completed = Input::get('completed') ?: 0;
 		$task->save();
+
+		return Redirect::home();
+	}
+
+	public function delete($id)
+	{
+		$task = Task::findOrFail($id);
+		$task->delete();
 
 		return Redirect::home();
 	}
