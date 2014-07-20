@@ -5,6 +5,7 @@
 		<h1>All Users</h1>
 		<ul class="list-group">
 			@foreach($tasks as $t)
+				<h4 style="text-align:center;">{{ $t[0]->user->username }}</h4>
 				@foreach($t as $task)
 					<li class="list-group-item {{ $task->completed ? 'completed' : 'uncompleted' }}">
 						<a href="/{{ $task->user->username }}/tasks">{{ gravatar_tag($task->user->email) }}</a>
