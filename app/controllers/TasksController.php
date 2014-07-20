@@ -34,7 +34,7 @@ class TasksController extends BaseController {
 			return Redirect::back()->withInput()->withErrors($e->getErrors());
 		}
 
-		return Redirect::home();
+		return Redirect::to('tasks');
 	}
 
 	public function update($id)

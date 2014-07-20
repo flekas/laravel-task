@@ -11,7 +11,8 @@
 |
 */
 
-Route::get( '/tasks', ['as' => 'home',  'uses' => 'TasksController@index'] );
+Route::get( '/', ['as' => 'home',  'uses' => 'HomeController@index'] );
+Route::get( '/tasks', ['as' => 'tasks',  'uses' => 'TasksController@index'] );
 Route::post('/tasks', 'TasksController@store');
 Route::patch('tasks/{id}/update', ['as' => 'tasks.update', 'uses' => 'TasksController@update']);
 Route::patch('tasks/{id}/delete', ['as' => 'tasks.delete', 'uses' => 'TasksController@delete']);

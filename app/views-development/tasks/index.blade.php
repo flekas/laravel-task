@@ -22,7 +22,7 @@
 			@endforeach
 		</ul>
 		@if(! isset($users))
-			{{ HTML::linkAction('home', 'Go Back!', null, ['class' => 'btn btn-primary']) }}
+			{{ HTML::linkAction('tasks', 'Go Back!', null, ['class' => 'btn btn-primary']) }}
 		@endif
 	</div>
 	@if(isset($users))
