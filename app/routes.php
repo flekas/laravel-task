@@ -11,9 +11,10 @@
 |
 */
 
-Route::get( '/', ['as' => 'home',  'uses' => 'TasksController@index'] );
+Route::get( '/tasks', ['as' => 'home',  'uses' => 'TasksController@index'] );
 Route::post('/tasks', 'TasksController@store');
 Route::patch('tasks/{id}/update', ['as' => 'tasks.update', 'uses' => 'TasksController@update']);
 Route::patch('tasks/{id}/delete', ['as' => 'tasks.delete', 'uses' => 'TasksController@delete']);
 Route::get('{username}/tasks', 'UserTasksController@index');
 Route::get('/users', 'UsersController@index');
+Route::post('/users', 'UsersController@store');
